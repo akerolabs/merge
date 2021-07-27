@@ -30,7 +30,7 @@ runs:
           echo "Fetching all"
           git fetch --all
           echo "Doing checkout of branch ${{ inputs.target }}"
-          git checkout  ${{ inputs.target }}"
+          git checkout ${{ inputs.target }}
           echo "Merging in ${{ inputs.source }} with the strategy being ${{ inputs.strategy }}"
           git merge --strategy-option=theirs ${{ inputs.source }}
           echo "Pushing to origin"
