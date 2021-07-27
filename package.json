@@ -1,0 +1,38 @@
+{
+  "name": "@akerolabs/merge",
+  "version": "1.0.0",
+  "description": "This action prints \"Hello World\" or \"Hello\" + the name of a person to greet to the log.",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.29.0",
+    "prettier": "2.2.1",
+    "prettier-eslint": "^12.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^7.19.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-recommended": "^4.1.0",
+    "eslint-plugin-prettier": "^3.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "lintFix": "eslint . --ext .js --fix",
+    "build": "ncc build index.js  --license licenses.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akerolabs/merge.git"
+  },
+  "keywords": [],
+  "author": "Akero Labs <dev@akerolabs.com> (https://akerolabs.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akerolabs/merge/issues"
+  },
+  "homepage": "https://github.com/akerolabs/merge#readme"
+}
