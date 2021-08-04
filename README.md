@@ -1,21 +1,37 @@
-# Hello world javascript action
+# Action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action will handle a merge. If you want to merge branchA into branchB using a merge strategy of 'theirs', then you can do it!
 
 ## Inputs
 
-## `who-to-greet`
+## `userName`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** The git username to use in the commits. Default `"Barry Mittens"`.
+
+## `userEmail`
+
+**Required** The git user email to use in the commits. Default `"someone@test.com"`.
+## `source`
+
+**Required** The branch to be merged in.
+
+## `target`
+
+**Required** The branch to be merged into.
+## `strategy`
+
+The merge strategy to use. Default `"theirs"`.
 
 ## Outputs
-
-## `time`
-
-The time we greeted you.
+No outputs
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1
+```
+uses: akerolabs/merge@v1
 with:
-  who-to-greet: 'Mona the Octocat'
+  source: ${GITHUB_REF#refs/heads/}
+  target: 'staging'
+  userEmail: 'nigel@smith.com'
+  userName: 'Action Hero'
+```
