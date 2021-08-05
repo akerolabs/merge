@@ -34,4 +34,4 @@ runs:
           echo "Merging in ${{ inputs.source }} with the strategy being ${{ inputs.strategy }}"
           git merge --strategy-option=theirs ${{ inputs.source }}
           echo "Pushing to origin"
-          git push origin test -f
+          git push origin ${{ inputs.target }} -f
