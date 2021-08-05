@@ -35,3 +35,20 @@ with:
   userEmail: 'nigel@smith.com'
   userName: 'Action Hero'
 ```
+
+# Deploy
+
+Reset the tag on origin
+```
+git push origin :refs/tags/v1
+```
+
+Point tag to recent commit
+```
+git tag -fa v1
+```
+
+Push tag
+```
+git push origin master --tags
+```
