@@ -33,5 +33,6 @@ runs:
           git checkout ${{ inputs.target }}
           echo "Merging in ${{ inputs.source }} with the strategy being ${{ inputs.strategy }}"
           git merge --strategy-option=theirs ${{ inputs.source }}
+          git commit --allow-empty -m "[skip ci]"
           echo "Pushing to origin"
           git push origin ${{ inputs.target }} -f
